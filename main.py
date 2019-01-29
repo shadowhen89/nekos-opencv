@@ -32,7 +32,7 @@ def main():
         print("Images found. Randomizing the choice...")
 
         # Randomizes the choice of the picture
-        image_path = 'images' + os.sep + images[random.randint(len(images))]
+        image_path = 'images' + os.sep + images[random.randint(0, len(images)-1)]
         print('Randomization done. ' + image_path + ' is the image for processing')
 
         image = cv2.imread(image_path)
